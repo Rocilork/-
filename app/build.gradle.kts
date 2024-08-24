@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+
+    id ("org.jetbrains.kotlin.plugin.serialization") version ("1.8.20")
 }
 
 android {
@@ -36,6 +38,12 @@ android {
 }
 
 dependencies {
+    implementation(platform("io.github.jan-tennert.supabase:bom:2.6.0"))
+    implementation("io.github.jan-tennert.supabase:postgrest-kt")
+    implementation("io.github.jan-tennert.supabase:storage-kt")
+    implementation("io.github.jan-tennert.supabase:realtime-kt")
+    implementation("io.ktor:ktor-client-cio:2.3.4")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
