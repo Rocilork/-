@@ -64,7 +64,7 @@ class Registrashen : AppCompatActivity() {
                             val userID = SB.getClient().auth.retrieveUserForCurrentSession(updateSession = true).id
 
                             val city = User(ID_пользователя = userID, ФИО = fioR)
-                            SB.getClient().postgrest["Пользователь"].insert(city)
+                            SB.getClient().from("Пользователь").insert(city)
 
                             Toast.makeText(applicationContext, "Вы зарегистрированы!", Toast.LENGTH_LONG).show()
                             startActivity(avtorizashen)
