@@ -30,6 +30,7 @@ class Glavnai : AppCompatActivity() {
 
         val buttonProfile: Button = findViewById(R.id.buttonProfile)
         val buttonCreateNote: Button = findViewById(R.id.buttonCreateNote)
+        val buttonExite: Button = findViewById(R.id.buttonExite)
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
 
         //Получаем список заметок
@@ -79,6 +80,11 @@ class Glavnai : AppCompatActivity() {
         buttonProfile.setOnClickListener {
             val profile = Intent(this, Profile::class.java)
             startActivity(profile)
+        }
+
+        buttonExite.setOnClickListener {
+            val exit = Intent(this, Avtorizashen::class.java)
+            startActivity(exit)
         }
 
         buttonCreateNote.setOnClickListener {
